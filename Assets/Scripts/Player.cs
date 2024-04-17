@@ -9,6 +9,14 @@ public class Player : MonoBehaviour
         if (collision.CompareTag("Obstacle"))
         {
             Debug.LogWarning("Auæ");
+            PlayerDeath();
         }
+    }
+
+    private void PlayerDeath()
+    {
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+
+        GameManager.Instance.GameOver();
     }
 }

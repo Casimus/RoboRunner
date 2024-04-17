@@ -12,6 +12,8 @@ public class FloorController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!GameManager.Instance.IsInGame) return;
+
         floorTileLeft.transform.position -= 
             new Vector3(GameManager.Instance.GetWorldSpeed(),0,0);
         floorTileRight.transform.position -=

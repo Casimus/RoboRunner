@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
+    public bool IsInGame { get; private set; }
+
+    [SerializeField] Button resetButon;
     [SerializeField] private float worldScrollingSpeed = 1.0f;
     [SerializeField] private TextMeshProUGUI scoreText;
 
@@ -23,10 +28,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        IsInGame = true;
+        resetButon.gameObject.SetActive(false);
+    }
+
     public float GetWorldSpeed() => worldScrollingSpeed;
 
     private void FixedUpdate()
     {
+        if (!GameManager.Instance.IsInGame) return;
         score += worldScrollingSpeed;
         UpdateScreenScore();
     }
@@ -34,6 +46,18 @@ public class GameManager : MonoBehaviour
     private void UpdateScreenScore()
     {
         scoreText.text = score.ToString("0");
+    }
+
+    public void GameOver()
+    {
+        IsInGame = false;
+        resetButon.gameObject.SetActive(true);
+        
+    }
+
+    public void RestartGame() 
+    {
+        SceneManager.LoadScene(0);
     }
 
 

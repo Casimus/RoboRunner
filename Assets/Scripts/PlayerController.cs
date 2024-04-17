@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (!GameManager.Instance.IsInGame) return;
+
         if (IsGrouded() && Time.time >= timeStamp)
         {
             if (isJumping || isDoubleJump)

@@ -16,6 +16,8 @@ public class ObstacleRotate : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!GameManager.Instance.IsInGame) return;
+
         transform.Rotate(new Vector3(0, 0, rotationSpeed));
     }
 }
