@@ -24,7 +24,7 @@ public class FloorController : MonoBehaviour
             //floorTileLeft.transform.position += new Vector3(18f, 0, 0);
 
             var newTile = Instantiate(tiles[UnityEngine.Random.Range(0, tiles.Length)],
-                floorTileRight.transform.position + new Vector3(18f, 0, 0),
+                floorTileRight.transform.position + new Vector3(16f, 0, 0),
                 Quaternion.identity, 
                 gameObject.transform);
 

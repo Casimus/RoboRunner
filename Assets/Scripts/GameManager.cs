@@ -32,7 +32,11 @@ public class GameManager : MonoBehaviour
     {
         IsInGame = true;
         resetButon.gameObject.SetActive(false);
+
+        
     }
+
+   
 
     public float GetWorldSpeed() => worldScrollingSpeed;
 
