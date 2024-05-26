@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Obstacle
+  - Coin
+  - Magnet
+  - Immortal
   layers:
   - Default
   - TransparentFX
@@ -50,4 +53,7 @@ TagManager:
     locked: 0
   - name: Obstacles
     uniqueID: 2022475049
+    locked: 0
+  - name: Pickups
+    uniqueID: 1562196047
     locked: 0

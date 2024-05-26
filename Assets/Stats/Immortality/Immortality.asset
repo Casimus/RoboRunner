@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d59618b5f04e5ca4b81d11486689b06b, type: 3}
+  m_Name: Immortality
+  m_EditorClassIdentifier: 
+  isActive: 0
+  duration: {fileID: 11400000, guid: 1163ae8ba99eeb142802a362638a94f1, type: 2}
+  speedBoost: {fileID: 11400000, guid: 506fd9aac41c5ef4d95c4fa89e7ec523, type: 2}
